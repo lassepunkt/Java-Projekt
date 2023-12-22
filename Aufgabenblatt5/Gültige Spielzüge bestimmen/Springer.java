@@ -33,7 +33,7 @@ public class Springer implements Spielfigur {
         if (position.getX()<0 || position.getX()>7 || position.getY()<0 || position.getY()>7) {
             return false;
         }
-        boolean validMuster = Math.pow(Math.abs(position.getX()-this.position.getX()),2)+(Math.pow(Math.abs(position.getY()-this.position.getY()),2)) == 5;
+        boolean validMuster = Math.pow(position.getX()-this.position.getX(),2)+(Math.pow(position.getY()-this.position.getY(),2)) == 5;
         boolean freiesFeld = false;
         if (Main.spielfeld[position.getX()][position.getY()] == null) {
             freiesFeld = true;
